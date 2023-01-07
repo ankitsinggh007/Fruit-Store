@@ -1,0 +1,17 @@
+.Wishlist{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+border-radius: 10px;
+padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containers{
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.items{
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}

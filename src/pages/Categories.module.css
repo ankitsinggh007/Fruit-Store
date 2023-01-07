@@ -1,0 +1,21 @@
+.Categories{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.Categories div{
+    width:400px;
+    height:400px;
+    border-radius:10px;
+    margin-top: 20px;
+    
+}
+.cat_items{
+    height:200px;
+    width:200px;
+    cursor: pointer;
+    padding: 20px;
+}

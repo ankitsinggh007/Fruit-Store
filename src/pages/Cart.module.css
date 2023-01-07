@@ -1,0 +1,31 @@
+.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cart_container{
+    height: 70vh;
+    width:70vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 40px;
+    border: 1px solid black;
+    
+
+}
+.item{
+    border-bottom:1px solid black;
+    height:35vh;
+    display: flex;
+
+}
+.spec{
+    margin-left: 20px;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    justify-content: center;
+}
