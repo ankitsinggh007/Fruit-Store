@@ -5,6 +5,11 @@ import { useNavigate } from 'react-router-dom'
 function Categories() {
 const navigate=useNavigate();
 
+
+
+
+
+
   return (
     <>
     <h1 style={{textAlign:"center"}}>Categories</h1>

@@ -20,7 +20,7 @@ function App() {
  const API_KEY=`AIzaSyCFwMBb4r146zfcv-IrdUn-vk8_asDkvck`;
   const Navigate=useNavigate();
   const [Creadential, setCreadential] = useState({fname:"",lname:"",email:"",Gender:"",Password:""});
-  const [LoggedInUserData, setLoggedInUserData] = useState({id:"",firstName:"",lastName:"",email:"",Gender:"",isAuthrized:false,Liked:[],Cart:[],isbpn:[],isbpn_Cart:[]});
+  const [LoggedInUserData, setLoggedInUserData] = useState({id:"",firstName:"",lastName:"",email:"",Gender:"",isAuthrized:false,Cart:[]});
 
  const auth = getAuth();
 //  Fetch Data
@@ -43,6 +43,7 @@ const FetchData= async (email)=>{
     firstName:Creadential.fname,
     lastName:Creadential.lname,
     Gender:Creadential.Gender,
+  
   }); 
   Navigate("/login")
  }

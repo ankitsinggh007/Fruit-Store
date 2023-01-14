@@ -41,19 +41,19 @@ export const categories=[
     id:3,
     color:`254,131,77`,
     icon:Bio,
-    subtitle:"Fresh Vegetables",
+    subtitle:"fresh Vegetable",
   },
   {
     id:4,
     color:`226,145,168`,
     icon:health,
-    subtitle:"Organic Fruit",
+    subtitle:"Organic Fruits",
   },
   {
     id:5,
     color:`255,213,158`,
     icon:Food,
-    subtitle:"Organic Vegetables",
+    subtitle:"Organic Vegetable",
   },
   
   
@@ -91,8 +91,8 @@ function MainBody() {
     <div className={classes.footer}>
       <div className={classes.details}>
         <div><img src={TBC} width="150"/></div>
-        <div>1418 XXXXXYYYYYYY</div>
-<div className={classes.contact}><div>as3824115@gmail.com</div>
+        <div>Nikita & Mantesh</div>
+<div className={classes.contact}><div>Nikita@gmail.com</div>
 <div>9784578456</div></div>
         <div className={classes.social}><FacebookIcon/><InstagramIcon/><YouTubeIcon/><TwitterIcon/></div>
       </div>

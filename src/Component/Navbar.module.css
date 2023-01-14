@@ -18,6 +18,16 @@
     cursor: pointer;
 
 }
+.CartNo{
+    background-color: red;
+    color: white;
+    padding: 0px 5px;
+    font-size: xx-small;
+    position: absolute;
+    right: 70px;
+    bottom: 20px;
+    border-radius: 50%;
+}
 .items{
     width: 40%;
     display: flex;

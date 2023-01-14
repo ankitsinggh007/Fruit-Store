@@ -31,7 +31,7 @@ function Slider() {
   console.log(BestSelling)
   return (
     <div>
-      <div className={classes.heading}><span style={{fontSize:"2rem"}} >In-Demand</span><span style={{display:"flex"}}><span className={classes.link} style={{ fontSize:"1rem",display:"flex",cursor:"pointer"}}>View All</span><span><ArrowForwardIosTwoToneIcon /></span></span></div>
+      <div className={classes.heading}><span style={{fontSize:"2rem"}} >In-Demand</span><span style={{display:"flex"}}><span className={classes.link} style={{ fontSize:"1rem",display:"flex",cursor:"pointer"}}></span><span></span></span></div>
     <Carousel
     className={classes.crousal}
     swipeable={false}
@@ -51,11 +51,9 @@ function Slider() {
       <div className={classes.card}>
       <img src={obj.coverpage} width="150px" height="240px"/>
       <span className={classes.title}>{obj.title}</span>
-      <span className={classes.author}>{obj.author}</span>
+      <span className={classes.author}>{obj.origin}</span>
       <span className={classes.price}>${obj.price}</span>
       <span className={classes.Action}>
-        <span className={classes.hover}>ADD TO CART</span>
-        <span><FavoriteBorderIcon className={classes.heart} fill="red" fontSize={"1.7rem"}  /></span>
       </span>
   
       </div>

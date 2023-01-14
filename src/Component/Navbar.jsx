@@ -19,12 +19,15 @@ const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
 
   const Toggle=()=>{
     if(LoggedInUserData?.isAuthrized){
-      
-      setStyle("");
+      if(Style=="none"){
+        setStyle("");
+
+      }
+      else if(Style==""){
+        setStyle("none")
+      }
     }
-    else{
-      setStyle("none")
-    }
+
   }
   const Logout=()=>{
       setLoggedInUserData(
@@ -45,8 +48,8 @@ const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
      <div className={classes.items}>
      
      <span className={classes}><Link to={"/categories"} style={{textDecoration:"none", color:"black"}}><span>Categories</span></Link></span>
-     <span className={classes.cart}><Link to={"/cart"} style={{textDecoration:"none", color:"black"}}></Link><span><AddShoppingCartIcon style={{position:"relative",top:"5px",fontSize:"2rem"}} /></span></span>
-
+     <Link to={"/cart"} className={classes.cart}><Link to={"/cart"} style={{textDecoration:"none", color:"black"}}></Link><span><AddShoppingCartIcon style={{position:"relative",top:"5px",fontSize:"2rem"}} /></span></Link>
+    <span className={classes.CartNo}>{LoggedInUserData.Cart.length===0?"":`${LoggedInUserData.Cart.length}`}</span>
      <div className={classes.navItem}>
 {
   !LoggedInUserData.isAuthrized && 

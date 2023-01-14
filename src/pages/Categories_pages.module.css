@@ -35,6 +35,87 @@
  position: absolute;
  right: 20px;
 }
+.cat_items{
+    height:200px;
+    width:200px;
+    cursor: pointer;
+    padding: 20px;
+}
 .Categories_items:hover{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.heading{
+    width:90vw;
+    display: flex;
+    height:200px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.crousal{
+    /* border:1px solid black; */
+    width:89.8vw;
+    margin: auto;
+    
+}
+.card{
+    width: 230px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;    
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid green;
+    margin:10px 0px;
+}
+.card image{
+    align-self: center;
+}
+.title{
+    border-top:1px solid black ;
+    font-size: 1.2rem;
+}
+.author{
+    font-size: 1rem;
+    color: grey;
+}
+.price{
+    font-size: 1.3rem;
+
+}
+.Action{
+    display:flex;
+    justify-content:space-between;
+    width:85%;
+    font-size: large;
+}
+.hover {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+  }
+  .heart:hover{
+    fill:red;
+  }
+  .link:hover{
+    color:orange
 }
