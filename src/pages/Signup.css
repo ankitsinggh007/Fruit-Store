@@ -11,6 +11,8 @@
     margin: auto;
     margin-top: 60px;
     border-radius: 15px;
+    background-color: rgba(255,255,255,.5);
+
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .Logo_register{
@@ -21,4 +23,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+.bo{
+    border: 1px solid black;
+    height: 90vh;
+    background-image: url("../Media/TBC.png");
+background-position: center;
+
+}
+@media screen and (max-width:660px) {
+    .Register{
+        width: 70%;
+        margin: 20% auto;
+        padding: 40px;
+    }
+    .bo{
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: center; */
+    }
 }

@@ -5,7 +5,10 @@ import classes from "./Slider.module.css"
 import BestSellingData from './Data/BestSellingbook';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTone';
-
+import {MdLocalOffer} from "react-icons/md"
+import {TbTruckDelivery} from "react-icons/tb"
+import {MdOutlineProductionQuantityLimits} from "react-icons/md"
+import {FaMapMarkerAlt} from "react-icons/fa"
 import image from "../Media/image.jpg"
 function Slider() {
   const responsive = {
@@ -46,13 +49,19 @@ function Slider() {
     containerClass="carousel-container"
     itemClass="carousel-item-padding-40-px"
 >
-  {BestSelling.map((obj,index)=>{
+  {BestSelling.slice(0,9).map((obj,index)=>{
      return(
       <div className={classes.card}>
       <img src={obj.coverpage} width="150px" height="240px"/>
       <span className={classes.title}>{obj.title}</span>
-      <span className={classes.author}>{obj.origin}</span>
-      <span className={classes.price}>${obj.price}</span>
+      <span className={classes.Discount}><MdLocalOffer fill="yellow"/> &nbsp;20% off</span>
+
+      <span className={classes.title}>In-demand</span>
+      <span className={classes.author}><FaMapMarkerAlt/>{obj.origin}</span>
+      <span className={classes.Qantity}><MdOutlineProductionQuantityLimits/> {obj.categories[2]}</span>
+
+      <span className={classes.price}>₹ {obj.price}</span>
+      <span className={classes.Deliver}><TbTruckDelivery fill="black"/>same day delivered</span>
       <span className={classes.Action}>
       </span>
   

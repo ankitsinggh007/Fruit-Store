@@ -4,10 +4,13 @@ import { User } from '../App'
 import { doc, updateDoc } from "firebase/firestore";
 import { Button } from 'reactstrap';
 import db from '../Component/Firbase';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const {LoggedInUserData,setLoggedInUserData} = useContext(User)
 console.log(LoggedInUserData,"LoggedinUser")
+const Navigate=useNavigate()
 let price=0;
 for(let i=0;i<LoggedInUserData.Cart.length;i++){
   console.log(LoggedInUserData.Cart[i].price)
@@ -23,6 +26,13 @@ const Purchase=async()=>{
   await updateDoc(washingtonRef, {
     Cart:[],
   });
+  await Swal.fire({
+    position: 'center',
+    icon: 'sucess',
+    title: `Order is on your way`,
+    showConfirmButton: true,
+  })
+  Navigate("/")
 }
 return (
     <div className={classes.cont}>

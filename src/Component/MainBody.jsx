@@ -21,7 +21,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import  Slider1 from "../pages/Slider"
 
 export const categories=[
   {
@@ -37,36 +38,25 @@ export const categories=[
     icon:Romance,
     subtitle:"Exotic Fruits",
   },
-  {
-    id:3,
-    color:`254,131,77`,
-    icon:Bio,
-    subtitle:"fresh Vegetable",
-  },
+  
   {
     id:4,
     color:`226,145,168`,
     icon:health,
     subtitle:"Organic Fruits",
   },
-  {
-    id:5,
-    color:`255,213,158`,
-    icon:Food,
-    subtitle:"Organic Vegetable",
-  },
-  
   
 ];
 
 function MainBody() {
-
+  const navigate=useNavigate();
+const data=["https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP10931-1200X300-30thDEC22.jpg","https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP11127-1200X300-16thJAN23.jpg","https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP8603-1200X300-5thDEC22.jpg"]
   const obj=categories.filter((obj,index)=>index<5);
   
   return (
     <>
     <div className={classes.section1}>
-        
+      <Slider1 Category="image" data={data}  />
     </div>
     <div className={classes.section2}>
       <div className={classes.header}><span style={{fontSize:"2rem"}}>Categories</span><Link to={"/categories"} style={{textDecoration:"none", color:"black"}}><span className={classes.link} style={{fontSize:"1rem",display:"flex",cursor:"pointer"}}><span>All Categories</span><span><ArrowForwardIosTwoToneIcon /></span></span></Link></div>
@@ -74,7 +64,7 @@ function MainBody() {
         {
           obj.map((obj,index)=>{
         return(
-               <div className={classes.cat_items} style={{backgroundColor: `rgba(${obj.color} ,.60)`}}>
+               <div className={classes.cat_items} onClick={()=>navigate(`/categories/${obj.subtitle}`)} style={{backgroundColor: `rgba(${obj.color} ,.60)`}}>
                 <img className={classes.cat_items_icons} src={obj.icon} width="35%"/>
                 <h2>{obj.subtitle}</h2>
                 <h3 >Shop Now</h3>
@@ -90,7 +80,7 @@ function MainBody() {
     
     <div className={classes.footer}>
       <div className={classes.details}>
-        <div><img src={TBC} width="150"/></div>
+        <div><img src={TBC} /></div>
         <div>Nikita & Mantesh</div>
 <div className={classes.contact}><div>Nikita@gmail.com</div>
 <div>9784578456</div></div>
@@ -107,9 +97,7 @@ function MainBody() {
         <h3>Categories</h3>
         <div>Fresh Fruits</div>
         <div>Exotics Fruits</div>
-        <div>fresh Vegetable</div>
         <div>Organic Fruit</div>
-        <div>Organic Vegetable</div>
       </div>
     </div>
     </>

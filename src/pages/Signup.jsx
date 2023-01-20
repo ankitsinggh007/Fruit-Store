@@ -73,7 +73,8 @@ const verifyData=(e)=>{
 
 
   return (
-    <form className='Register' onSubmit={verifyData}>
+    <div className='bo'>
+      <form className='Register' onSubmit={verifyData}>
           <div  ><img className='Logo_register' src={tbc} height="60px" width="60px"/>
           </div>
           {Message.length != 0 && <Alert color="danger">
@@ -100,6 +101,7 @@ const verifyData=(e)=>{
 </div>
     
   </form>
+    </div>
   )
 }
 

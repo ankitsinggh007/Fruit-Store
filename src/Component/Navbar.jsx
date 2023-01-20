@@ -42,19 +42,18 @@ const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
   return (
     <div className={classes.container}>
      <Link to="/" style={{color:"black",textDecoration:"none"}}><div className={classes.Logo} >
-     <span className={classes.logo}><img src={tbc} height="110px" width="110px"/></span>
+     <span className={classes.logo}><img src={tbc} className={classes.image} /></span>
         <span className={classes.Name}> &nbsp;The Fruit Avenue</span>
      </div></Link>
-     <div className={classes.items}>
      
-     <span className={classes}><Link to={"/categories"} style={{textDecoration:"none", color:"black"}}><span>Categories</span></Link></span>
-     <Link to={"/cart"} className={classes.cart}><Link to={"/cart"} style={{textDecoration:"none", color:"black"}}></Link><span><AddShoppingCartIcon style={{position:"relative",top:"5px",fontSize:"2rem"}} /></span></Link>
-    <span className={classes.CartNo}>{LoggedInUserData.Cart.length===0?"":`${LoggedInUserData.Cart.length}`}</span>
-     <div className={classes.navItem}>
+     
+     <span className={classes.cat}><Link to={"/categories"} style={{textDecoration:"none", color:"black"}}><span>Categories</span></Link></span>
+     <Link to={"/cart"} className={classes.cart}><Link to={"/cart"} style={{textDecoration:"none", color:"black"}}></Link><span><AddShoppingCartIcon className={classes.Shopping} /><div className={classes.CartNo}>{LoggedInUserData.Cart.length===0?"":`${LoggedInUserData.Cart.length}`}</div></span></Link>
+    
 {
   !LoggedInUserData.isAuthrized && 
 
-<Link to={"/signup"}><Button variant="contained" style={{backgroundColor:"#161619",padding:"12px",fontSize:"1rem"}}>Register</Button></Link>
+<Link to={"/signup"}><Button variant="contained" className={classes.reister} >Register</Button></Link>
 }
 {
   LoggedInUserData.isAuthrized && 
@@ -68,14 +67,12 @@ const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
 <div className={classes.impForm} style={{display:`${Style}`}}>
   <ul className={classes.line}>
     <li>hi, {LoggedInUserData.firstName}</li>
-    <hr style={{width:"100%",margin:"auto"}}/>
+    <hr style={{width:"70%",margin:"auto"}}/>
     <li onClick={Logout} style={{cursor:"pointer"}}>Logout</li>
   </ul>
   </div>
 </div>
 }
-</div>
-    </div>
     </div>
 
   )

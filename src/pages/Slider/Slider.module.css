@@ -1,0 +1,25 @@
+.container1 {
+    background-color: #F2F2F2;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.feedback {
+    /* margin: 17% auto; */
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    align-self: center;
+}
+.caption{
+    width: 50%;
+}

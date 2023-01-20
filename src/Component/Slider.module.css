@@ -8,16 +8,19 @@
 }
 .crousal{
     /* border:1px solid black; */
-    width:89.8vw;
-    margin: auto;
+    /* width:89.8vw; */
+    width: auto;
+    /* margin: auto; */
     
 }
 .card{
-    width: 230px;
+    width: fit-content;
     height: 400px;
     display: flex;
     flex-direction: column;
-    padding: 30px;    
+    padding: 10px;    
+    border:1px solid grey;
+    margin:auto;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -69,4 +72,11 @@
   }
   .link:hover{
     color:orange
+}
+.Discount{
+    background: linear-gradient(to right, green, transparent);
+}
+.Deliver{
+color: green;
+
 }

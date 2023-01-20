@@ -6,6 +6,7 @@
 .cart_container{
     height: 70vh;
     width:70vw;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -29,4 +30,13 @@
     flex-direction: row;
     width: 25vw;
     justify-content: center;
+}
+@media screen and (max-width:760px){
+    .cart_container{
+        width:20% ;
+        margin-top: 80px;
+    }
+    .item img{
+        width:70px;
+    }
 }

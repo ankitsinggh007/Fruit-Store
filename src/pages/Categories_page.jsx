@@ -7,6 +7,11 @@ import { MdFavoriteBorder } from "react-icons/md"
 import { User } from '../App';
 import { doc, updateDoc } from "firebase/firestore";
 import db from '../Component/Firbase';
+import {MdLocalOffer} from "react-icons/md"
+import {TbTruckDelivery} from "react-icons/tb"
+import {MdOutlineProductionQuantityLimits} from "react-icons/md"
+import {FaMapMarkerAlt} from "react-icons/fa"
+import Swal from 'sweetalert2';
 function Categories_page() {
   const { LoggedInUserData, setLoggedInUserData } = useContext(User)
   const Navigate = useNavigate();
@@ -22,6 +27,7 @@ function Categories_page() {
     setData([...array]);
   }, []);
   const AddToCart = async (obj, e) => {
+    if(LoggedInUserData.isAuthrized){
     const obj1 = {
       ...LoggedInUserData, Cart: [...LoggedInUserData.Cart, obj]
     }
@@ -29,7 +35,16 @@ function Categories_page() {
     const washingtonRef = doc(db, "User", LoggedInUserData.id);
     await updateDoc(washingtonRef, {
       Cart: obj1.Cart,
-    });
+    });}
+    else{
+      await Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: `please Login`,
+        showConfirmButton: true,
+      })
+      Navigate("/login")
+    }
   }
 
   return (
@@ -41,10 +56,15 @@ function Categories_page() {
 
             return (
               <div className={classes.card}>
-                <img src={obj.image} width="150px" height="240px" />
+                <img src={obj.image} width="150px"  height="240px" />
                 <span className={classes.title}>{obj.title}</span>
-                <span className={classes.author}>{obj.origin}</span>
+                {obj.categories && <span className={classes.Discount}><MdLocalOffer fill="yellow"/> &nbsp;20% off</span>}
+                <span className={classes.author}><FaMapMarkerAlt/>{obj.origin}</span>
+                {obj.categories && <span className={classes.Deliver}><TbTruckDelivery fill="black"/>same day delivered</span>}
+
                 <span className={classes.price}>₹ {obj.price}</span>
+                {obj.categories && <span className={classes.Qantity}><MdOutlineProductionQuantityLimits/> {obj.categories[2]}</span>}
+
                 <span className={classes.Action}>
                   <span className={classes.hover} onClick={(e) => AddToCart(obj, e)} >ADD TO CART</span>
                 </span>

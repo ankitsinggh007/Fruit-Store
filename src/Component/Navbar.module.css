@@ -1,79 +1,50 @@
 .container{
-    padding: 25px;
-    max-height: 45px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    display: flex;
-    flex-direction: auto;
+    display:flex;
     justify-content: space-between;
+    padding: 10px;
     align-items: center;
-
+}
+.image{
+    width: 7vw;
+    height: 1;
+    background-size: cover;
 }
 .Logo{
     display: flex;
     align-items: center;
-}
-.container span{
-    position: relative;
-    font-size: 1.4rem;
-    cursor: pointer;
-
-}
-.CartNo{
-    background-color: red;
-    color: white;
-    padding: 0px 5px;
-    font-size: xx-small;
-    position: absolute;
-    right: 70px;
-    bottom: 20px;
-    border-radius: 50%;
-}
-.items{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.impForm{
-    background-color: black;
-    position: absolute;
-    top: 70px;
-    right:75px;
-    color: white;
-}
-.line{
-    list-style: none;
-}
-.line li{
-    margin: auto;
-    margin-right: 25px;
-
-}
-
-.navItem{
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
-}
-.search{
-    /* border: 1px solid black; */
-    width: 25%;
-    display: flex;
-    align-items: center;
-    position: relative;
+    justify-content: center;
 }
 .cart{
-    display: flex;
-    align-items: center;
-    width: 15px;
     position: relative;
-    justify-content: space-between;
 }
-.wishlist{
-    display: flex;
-    align-items: center;
-    width: 20%;
-    position: relative;
-    justify-content: space-between;
+.CartNo{
+    position: absolute;
+    top: -15px;
+    left: 19px;
+    background-color: red;
+    padding: 0px 3px;
+    color: white;
+    border-radius: 50%;
+}
+.reister{
+    background-color:#161619;padding:12px;font-size:1rem;
+}
+@media screen and (max-width: 768px) {
+
+    .image{
+        width: 14vw;
+    }
+    .Name{
+        display: none;
+    }
+    .reister{
+        padding:5px 2px;
+        font-size: .7rem;
+    }
+    .cat{
+        font-size: .8rem;
+
+
+    }
 }
