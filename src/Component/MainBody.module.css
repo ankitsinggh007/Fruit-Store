@@ -1,16 +1,5 @@
 .section1{
-    /* padding: 120px; */
-    /* background-color: #FFF6F7;
-    display: flex;
-    height: 390px;
-    width: 94vw;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-    transition: linear;
-    border: 1px solid white;
-    background-image: url("../Media/background.webp");
-    background-size: contain; */
+    padding: 0px 10px;
 
 }
 .feature{
@@ -19,6 +8,14 @@
 }
 .section1 p{
     font-size: 2rem;
+}
+.image{
+    border: 1px solid black;
+    height:50%;
+    background-image: url("../Media/TBC.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
 }
 .image{
     transform: translateX(2);
@@ -66,7 +63,7 @@ width:15vw
     flex-direction: row;
     border:1px solid white;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0px 30px;
 }
 .details{
     font-weight: 400;

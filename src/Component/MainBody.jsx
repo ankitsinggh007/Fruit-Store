@@ -6,6 +6,7 @@ import {Button, TextField} from "@mui/material"
 import Creative from "../Media/freshF.webp"
 import Bio from "../Media/vegetableF.webp"
 import Story from "../Media/Story.svg"
+import { NavLink } from 'react-router-dom';
 import Novel from "../Media/Novel.svg"
 import Kids from "../Media/Kids.svg"
 import Horror from "../Media/Horror.svg"
@@ -80,24 +81,21 @@ const data=["https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP10931-
     
     <div className={classes.footer}>
       <div className={classes.details}>
-        <div><img src={TBC} /></div>
+        <div className={classes.image}></div>
         <div>Nikita & Mantesh</div>
-<div className={classes.contact}><div>Nikita@gmail.com</div>
-<div>9784578456</div></div>
-        <div className={classes.social}><FacebookIcon/><InstagramIcon/><YouTubeIcon/><TwitterIcon/></div>
+<div className={classes.contact}><div>mmbetgari05@gmail.com</div>
+<div>8095498152</div></div>
       </div>
+      <div style={{alignSelf:"flex-end"}}><span>	&#169; 2022-2023 The fruit Avenue|All  right reserved</span></div>
       <div className={classes.Explore}>
       <h3>Explore</h3>
-        <div>About us</div>
-        <div>Sitemap</div>
-        <div>Bookmarks</div>
-        <div>Signin/join</div>
+        <NavLink to="/login" style={{textDecoration:"none",color:"black"}}>Signin/join</NavLink>
       </div>
       <div className={classes.Categories}>
         <h3>Categories</h3>
-        <div>Fresh Fruits</div>
-        <div>Exotics Fruits</div>
-        <div>Organic Fruit</div>
+        <NavLink style={{textDecoration:"none",color:"black"}} to="/categories/Fresh Fruits">Fresh Fruits</NavLink>
+        <NavLink to="/categories/Exotic Fruits" style={{textDecoration:"none",color:"black"}}>Exotics Fruits</NavLink>
+        <NavLink to="/categories/Organic Fruits" style={{textDecoration:"none",color:"black"}}>Organic Fruit</NavLink>
       </div>
     </div>
     </>

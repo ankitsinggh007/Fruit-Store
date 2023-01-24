@@ -97,7 +97,7 @@ const verifyData=(e)=>{
 <Button variant="contained" type="submit" style={{backgroundColor:"#161619",padding:"12px",fontSize:"1.2rem"}}>Register</Button>
 </div>
 <div >
-<Link  to={"/login"} >Already User Sign in</Link>
+<Link  to={"/login"} >Already User ?Sign in</Link>
 </div>
     
   </form>

@@ -89,7 +89,7 @@ return (
    
     <div className={classes.inut}>
     <div className={classes.total}>
-      <h2>Subtotal:</h2>
+      <h2 style={{color:"green"}}>Total:</h2>
       <h1 style={{marginTop:"15px"}}>₹ {price}</h1>
     </div>
       <label>Address</label>
