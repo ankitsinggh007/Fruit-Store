@@ -45,6 +45,7 @@ const FetchData= async (email)=>{
     Gender:Creadential.Gender,
   
   }); 
+  alert("Registration successful!");
   Navigate("/login")
  }
 // Create User
@@ -72,7 +73,7 @@ const verifyCredential=async()=>{
       const user = userCredential.user;
       console.log(user.email,"user");
       FetchData(user.email);
-      
+      alert("logge in success")
       Navigate("/")
     })
     .catch((error) => {
