@@ -84,7 +84,7 @@ const data=["https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP10931-
         <div className={classes.image}></div>
         <div>Nikita & Mantesh</div>
 <div className={classes.contact}><div>mmbetgari05@gmail.com</div>
-<div>8095498152</div></div>
+<div>7975843900</div></div>
       </div>
       <div style={{alignSelf:"flex-end"}}><span>	&#169; 2022-2023 The fruit Avenue|All  right reserved</span></div>
       <div className={classes.Explore}>
